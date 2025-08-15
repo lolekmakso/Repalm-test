@@ -262,7 +262,7 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Основное меню */
+/* Основне меню */
 .menu {
   list-style: none;
   margin: 0;
@@ -275,7 +275,6 @@ body {
   position: relative;
 }
 
-/* Ссылки и label */
 .menu a,
 .menu label {
   display: flex;
@@ -339,6 +338,7 @@ body {
     transition: max-height 0.3s ease;
     border-bottom: 1px solid var(--border);
     z-index: 1000;
+    border-radius: 12px;
   }
   .nav__checkbox:checked ~ .menu {
     max-height: 1000px;
@@ -346,6 +346,10 @@ body {
 
   .menu__item {
     width: 100%;
+  }
+
+  .submenu {
+    padding: 0 8px;
   }
 
   .has-sub .submenu {
@@ -368,6 +372,10 @@ body {
   .menu label {
     display: block;
     padding: 14px 16px;
-    border-radius: 0;
+    border-radius: 8px;
+  }
+
+  .menu__link + .submenu__checkbox:checked + .submenu {
+    max-height: 500px;
   }
 }
