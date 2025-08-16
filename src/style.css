@@ -83,13 +83,13 @@ body {
   border: none;
   cursor: pointer;
   line-height: 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
 }
 .fav-btn:hover {
   transform: translateY(-1px);
 }
 .fav-btn:active {
-  transform: translateY(0);
+  transform: translateY(2px);
 }
 .fav-btn svg {
   width: 28px;
@@ -156,14 +156,14 @@ body {
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.15s ease;
   white-space: nowrap;
 }
 .add-btn:hover {
   background: var(--accent-hover);
 }
 .add-btn:active {
-  transform: translateY(1px);
+  transform: translateY(2px);
 }
 
 /* ====== RESPONSIVE CARDS ====== */
@@ -337,9 +337,9 @@ body {
     max-height: 0;
     transition: max-height 0.3s ease;
     border-bottom: 1px solid var(--border);
-    z-index: 1000;
     border-radius: 12px;
   }
+
   .nav__checkbox:checked ~ .menu {
     max-height: 1000px;
   }
@@ -349,33 +349,26 @@ body {
   }
 
   .submenu {
-    padding: 0 8px;
-  }
-
-  .has-sub .submenu {
     position: static;
-    max-height: 0;
-    overflow: hidden;
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: none;
     box-shadow: none;
     border: none;
-    background: #f9fafb;
-    transition: max-height 0.3s ease;
+    background: #fff;
+    padding-left: 20px;
+    padding-top: 0;
   }
 
-  .submenu__checkbox:checked + label + .submenu {
-    max-height: 500px;
-  }
-
-  .menu a,
-  .menu label {
+  .menu a {
     display: block;
     padding: 14px 16px;
     border-radius: 8px;
   }
 
-  .menu__link + .submenu__checkbox:checked + .submenu {
-    max-height: 500px;
+  .menu__link {
+    font-size: 18px;
+    font-weight: 600;
   }
 }
