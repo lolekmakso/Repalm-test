@@ -328,15 +328,15 @@ body {
 
   .menu {
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 0;
     right: 0;
     flex-direction: column;
+    gap: 10px;
     background: #ffffff;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
-    border-bottom: 1px solid var(--border);
     border-radius: 12px;
   }
 
@@ -370,5 +370,13 @@ body {
   .menu__link {
     font-size: 18px;
     font-weight: 600;
+  }
+
+  .menu li:first-child .menu__link {
+    margin-top: 20px;
+  }
+
+  .menu li:last-child .menu__link {
+    margin-bottom: 20px;
   }
 }
